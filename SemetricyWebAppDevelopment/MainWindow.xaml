@@ -37,7 +37,7 @@
         <TextBlock Grid.Column="1" Grid.Row="4" Text="Project name: " Foreground="Gray" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
         <TextBox x:Name="nameOfTheProject" Grid.Column="1" Grid.Row="5" Width="220" Margin="0,0,0,10" HorizontalAlignment="Left" />
 
-        <Button x:Name="createProjectBtn" Grid.Column ="1" Grid.Row="6" Width="100" HorizontalAlignment="Left" Content="Create" Margin="0,0,0,10" /> 
+        <Button x:Name="createProjectBtn" Grid.Column ="1" Grid.Row="6" Width="100" HorizontalAlignment="Left" Content="Create" Margin="0,0,0,10" Click="createProjectBtn_Click" /> 
         
         <!--Column 2-->
         <TextBlock Grid.Column="2" Grid.Row="1" Text="Open project" FontSize="25" Foreground="White" HorizontalAlignment="Center"/>

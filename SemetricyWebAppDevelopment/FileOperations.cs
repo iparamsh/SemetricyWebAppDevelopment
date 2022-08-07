@@ -15,7 +15,7 @@ namespace SemetricyWebAppDevelopment
         {
             if (!File.Exists(filePath))
             {
-                System.IO.Directory.CreateDirectory(filePath);
+                Directory.CreateDirectory(filePath);
             }
         }
 
@@ -40,10 +40,20 @@ namespace SemetricyWebAppDevelopment
         {
             if (Directory.Exists(path))
             {
-                Directory.CreateDirectory(path + "\\" + name);
+                path = path + "\\" + name;
+                Directory.CreateDirectory(path);
+
+                var htmlFile = File.CreateText(path + "\\" + "index.html");
+                htmlFile.Close();
+                var cssFile = File.CreateText(path + "\\" + "style.css");
+                cssFile.Close();
+                var jsFile = File.CreateText(path + "\\" + "script.js");
+                jsFile.Close();
+                MessageBox.Show("success!");
             }
             else
-                System.Windows.Forms.MessageBox.Show("Folder does not exist");
+                MessageBox.Show("Folder does not exist");
+
         }
 
         public bool checkIfCorrectPathForOpenFile(string path)

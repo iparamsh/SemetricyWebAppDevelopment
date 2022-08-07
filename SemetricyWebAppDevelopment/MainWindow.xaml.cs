@@ -25,7 +25,7 @@ namespace SemetricyWebAppDevelopment
     public partial class MainWindow : Window
     {
         private FileOperations fileOperation = new FileOperations();
-        private string pathToDir = System.IO.Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents/Semetricy");
+        private string pathToDir = System.IO.Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents\\Semetricy");
 
         //private string sFileName = "";
 
