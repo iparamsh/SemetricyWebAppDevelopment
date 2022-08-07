@@ -49,7 +49,8 @@ namespace SemetricyWebAppDevelopment
                 cssFile.Close();
                 var jsFile = File.CreateText(path + "\\" + "script.js");
                 jsFile.Close();
-                MessageBox.Show("success!");
+
+                HTMLEditor.editHTMLTemplateForEmptyProject(path);
             }
             else
                 MessageBox.Show("Folder does not exist");
