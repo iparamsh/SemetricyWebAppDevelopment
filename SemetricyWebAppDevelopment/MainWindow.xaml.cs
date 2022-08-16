@@ -24,6 +24,7 @@ namespace SemetricyWebAppDevelopment
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Workspace workspace = new Workspace();
         private FileOperations fileOperation = new FileOperations();
         private string pathToDir = System.IO.Path.Combine(Environment.ExpandEnvironmentVariables("%userprofile%"), "Documents\\Semetricy");
 
@@ -82,6 +83,8 @@ namespace SemetricyWebAppDevelopment
             if (nameOfTheProject.Text != "" && pathToProject.Text != "")
             {
                 fileOperation.createNewProject(pathToProject.Text, nameOfTheProject.Text);
+                Container.pathToProject = pathToProject.Text + "\\" + nameOfTheProject.Text;
+                jumpToNewWindow();
             }
             else
             {
@@ -96,8 +99,8 @@ namespace SemetricyWebAppDevelopment
         {
             if (pathToOpenProject.Text != "" && fileOperation.checkIfCorrectPathForOpenFile(pathToOpenProject.Text))
             {
-                MessageBox.Show("sucess");
-                //...
+                Container.pathToProject = pathToOpenProject.Text;
+                jumpToNewWindow();
             }
             else
             {
@@ -110,6 +113,11 @@ namespace SemetricyWebAppDevelopment
                     MessageBox.Show("Path is incorrect!");
                 }
             }
+        }
+        private void jumpToNewWindow()
+        {
+            this.Close();
+            workspace.Show();
         }
     }
 }
