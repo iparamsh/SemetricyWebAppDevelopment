@@ -36,5 +36,12 @@ namespace SemetricyWebAppDevelopment
             css += "}";
             File.WriteAllText(path + "//" + "style.css", css);
         }
+
+        public static void addLineToWebPageCode(string content)
+        {
+            string allHtml = File.ReadAllText(Container.pathToProject + "\\" + "index.html");
+            allHtml = allHtml.Insert((allHtml.Count() - 16), content + "\n");
+            File.WriteAllText(Container.pathToProject + "\\" + "index.html", allHtml);
+        }
     }
 }

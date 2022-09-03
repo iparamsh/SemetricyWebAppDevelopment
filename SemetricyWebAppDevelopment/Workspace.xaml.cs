@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DragDropEffects = System.Windows.Forms.DragDropEffects;
 
 namespace SemetricyWebAppDevelopment
 {
@@ -21,6 +22,7 @@ namespace SemetricyWebAppDevelopment
     /// </summary>
     public partial class Workspace : Window
     {
+        private string selectedItem = "";
         public Workspace()
         {
             InitializeComponent();
@@ -29,6 +31,25 @@ namespace SemetricyWebAppDevelopment
         private void loadedWindow_action(object sender, RoutedEventArgs e)
         {
             htmlVisualizer.Navigate(Container.pathToProject + "\\" + "index.html");
+        }
+
+        private void Text_mouseClick(object sender, MouseButtonEventArgs e)
+        {
+            this.selectedItem = "text";
+        }
+
+        private void AddObject_btnClick(object sender, RoutedEventArgs e)
+        {
+            if (selectedItem == "text")
+            {
+                HTMLEditor.addLineToWebPageCode(contentOfTheSelectedObject.Text);
+                htmlVisualizer.Refresh();
+            }
+        }
+
+        private void newLineCommand_btnClick(object sender, RoutedEventArgs e)
+        {
+            HTMLEditor.addLineToWebPageCode("<br>");
         }
     }
 }
