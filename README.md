@@ -15,3 +15,4 @@ Double click on something what you want to use and use panel on the right in ord
 ![image](https://user-images.githubusercontent.com/73321844/188295079-8c3241fb-8197-4850-9aa3-0e89d16b5d12.png)
 
  and boom thats it!
+![image](https://user-images.githubusercontent.com/73321844/188295108-dfe05c8e-6313-4cdd-902d-dfcff8df0fd6.png)
