@@ -35,21 +35,46 @@ namespace SemetricyWebAppDevelopment
 
         private void Text_mouseClick(object sender, MouseButtonEventArgs e)
         {
+
+            propertyHeader.Content = "Text Content:";
             this.selectedItem = "text";
         }
+        private void buttonSelection_mouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            propertyHeader.Content = "Button Content:";
+            this.selectedItem = "button";
+        }
+
+        private void imageSelection_doubleClick(object sender, MouseButtonEventArgs e)
+        {
+            propertyHeader.Content = "Image source:";
+            this.selectedItem = "image";
+        }
+
+        //----------------
 
         private void AddObject_btnClick(object sender, RoutedEventArgs e)
         {
             if (selectedItem == "text")
             {
                 HTMLEditor.addLineToWebPageCode(contentOfTheSelectedObject.Text);
-                htmlVisualizer.Refresh();
             }
+            else if (selectedItem == "button")
+            {
+                HTMLEditor.addLineToWebPageCode("<button>" + contentOfTheSelectedObject.Text + "</button>");
+            }
+            else if (selectedItem == "image")
+            {
+                HTMLEditor.addLineToWebPageCode("<img src=\"" + contentOfTheSelectedObject.Text + "\">");
+            }
+            htmlVisualizer.Refresh();
         }
 
         private void newLineCommand_btnClick(object sender, RoutedEventArgs e)
         {
             HTMLEditor.addLineToWebPageCode("<br>");
         }
+
+       
     }
 }

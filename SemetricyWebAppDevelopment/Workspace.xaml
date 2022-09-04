@@ -39,10 +39,10 @@
         <Label Grid.Column="1" Grid.Row="1" Content="Text" Margin="30,0,50,0" HorizontalContentAlignment="Center" MouseDoubleClick="Text_mouseClick" />
 
         <Image Grid.Column="1" Grid.Row="2" Height="30" HorizontalAlignment="Left" Source="C:\Users\illya\Documents\SResources\button.png"/>
-        <Label Grid.Column="1" Grid.Row="2" Content="Button" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+        <Label Grid.Column="1" Grid.Row="2" Content="Button" Margin="30,0,50,0" HorizontalContentAlignment="Center" MouseDoubleClick="buttonSelection_mouseDoubleClick"/>
 
         <Image Grid.Column="1" Grid.Row="3" Height="30" HorizontalAlignment="Left" Source="C:\Users\illya\Documents\SResources\image.png"/>
-        <Label Grid.Column="1" Grid.Row="3" Content="Image" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+        <Label Grid.Column="1" Grid.Row="3" Content="Image" Margin="30,0,50,0" HorizontalContentAlignment="Center" MouseDoubleClick="imageSelection_doubleClick"/>
         
         <Label Grid.Column="1" Grid.Row="4" Content="Text" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
         
