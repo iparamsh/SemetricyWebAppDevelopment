@@ -22,6 +22,10 @@ namespace SemetricyWebAppDevelopment
     /// </summary>
     public partial class Workspace : Window
     {
+        Text textElement = new Text();
+        Button buttonElement = new Button();
+        Image imageElement = new Image();  
+
         private string selectedItem = "";
         public Workspace()
         {
@@ -35,19 +39,18 @@ namespace SemetricyWebAppDevelopment
 
         private void Text_mouseClick(object sender, MouseButtonEventArgs e)
         {
-
-            propertyHeader.Content = "Text Content:";
+            Properties.Content = textElement;
             this.selectedItem = "text";
         }
         private void buttonSelection_mouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            propertyHeader.Content = "Button Content:";
+            Properties.Content = buttonElement;
             this.selectedItem = "button";
         }
 
         private void imageSelection_doubleClick(object sender, MouseButtonEventArgs e)
         {
-            propertyHeader.Content = "Image source:";
+            Properties.Content = imageElement;
             this.selectedItem = "image";
         }
 
@@ -57,15 +60,15 @@ namespace SemetricyWebAppDevelopment
         {
             if (selectedItem == "text")
             {
-                HTMLEditor.addLineToWebPageCode(contentOfTheSelectedObject.Text);
+                HTMLEditor.addLineToWebPageCode(textElement.generateCommand());
             }
             else if (selectedItem == "button")
             {
-                HTMLEditor.addLineToWebPageCode("<button>" + contentOfTheSelectedObject.Text + "</button>");
+                HTMLEditor.addLineToWebPageCode(buttonElement.generateCommand());
             }
             else if (selectedItem == "image")
             {
-                HTMLEditor.addLineToWebPageCode("<img src=\"" + contentOfTheSelectedObject.Text + "\">");
+                HTMLEditor.addLineToWebPageCode(imageElement.generateCommand());
             }
             htmlVisualizer.Refresh();
         }

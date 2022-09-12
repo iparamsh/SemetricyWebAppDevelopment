@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SemetricyWebAppDevelopment"
         mc:Ignorable="d" FontSize="18"
-        Background="#B2A198"
+        Background="#75bf78"
         Title="Workspace" Height="700" Width="1080" WindowState="Maximized">
     <Grid Loaded="loadedWindow_action">
         <Grid.ColumnDefinitions>
@@ -43,8 +43,9 @@
 
         <Image Grid.Column="1" Grid.Row="3" Height="30" HorizontalAlignment="Left" Source="C:\Users\illya\Documents\SResources\image.png"/>
         <Label Grid.Column="1" Grid.Row="3" Content="Image" Margin="30,0,50,0" HorizontalContentAlignment="Center" MouseDoubleClick="imageSelection_doubleClick"/>
-        
-        <Label Grid.Column="1" Grid.Row="4" Content="Text" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+
+        <Image Grid.Column="1" Grid.Row="4" Height="30" HorizontalAlignment="Left" Source="C:\Users\illya\Documents\SResources\background.png"/>
+        <Label Grid.Column="1" Grid.Row="4" Content="Background" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
         
         <Label Grid.Column="1" Grid.Row="5" Content="Text" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
         
@@ -67,12 +68,14 @@
 
         <!--Column 3-->
 
-        <Label x:Name ="propertyHeader" Grid.Column="3" Grid.Row="1" Content="Content:" HorizontalContentAlignment="Center"/>
-        <TextBox Grid.Row="2" Grid.Column="3" x:Name="contentOfTheSelectedObject" Grid.RowSpan="2" Background="AliceBlue" Margin="5"/>
+        <Frame Grid.Row="1" Grid.Column="3" x:Name="Properties" Grid.RowSpan="13" Margin="10,0,0,100" />
 
-        <Button Grid.Column="3" Grid.Row="10" Content="New Line" Margin="25,5" Click="newLineCommand_btnClick" />
+        <!--<Label x:Name ="propertyHeader" Grid.Column="3" Grid.Row="1" Content="Content:" HorizontalContentAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="3" x:Name="contentOfTheSelectedObject" Grid.RowSpan="2" Background="AliceBlue" Margin="5"/>-->
 
-        <Button Grid.Column="3" Grid.Row="11" Content="Add" Margin="25, 5" Click="AddObject_btnClick" />
+        <Button Grid.Column="3" Grid.Row="13" VerticalAlignment="Bottom" Content="New Line" Margin="25,5" Click="newLineCommand_btnClick" />
+
+        <Button Grid.Column="3" Grid.Row="13" VerticalAlignment="Bottom" Content="Add" Margin="25, 40" Click="AddObject_btnClick" />
         <!--Properties-->
     </Grid>
 </Window>

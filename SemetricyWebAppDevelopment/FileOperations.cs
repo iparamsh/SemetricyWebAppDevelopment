@@ -36,6 +36,24 @@ namespace SemetricyWebAppDevelopment
             return path;
         }
 
+        public static string browseImageFileDialog()
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.DefaultExt = ".png";
+            dlg.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+            Nullable<bool> result = dlg.ShowDialog();
+
+
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                return filename;
+            }
+            return "";
+        }
+
         public void createNewProject(string path, string name)
         {
             if (Directory.Exists(path))
