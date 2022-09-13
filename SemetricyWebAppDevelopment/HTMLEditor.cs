@@ -39,6 +39,10 @@ namespace SemetricyWebAppDevelopment
 
         public static void addLineToWebPageCode(string content)
         {
+            if (content == "" || content == null)
+            {
+                return;
+            }
             string allHtml = File.ReadAllText(Container.pathToProject + "\\" + "index.html");
             allHtml = allHtml.Insert((allHtml.Count() - 16), content + "\n");
             File.WriteAllText(Container.pathToProject + "\\" + "index.html", allHtml);

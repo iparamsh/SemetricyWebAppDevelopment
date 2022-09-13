@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SemetricyWebAppDevelopment"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
         mc:Ignorable="d" FontSize="18"
         Background="#75bf78"
         Title="Workspace" Height="700" Width="1080" WindowState="Maximized">
@@ -45,33 +46,31 @@
         <Label Grid.Column="1" Grid.Row="3" Content="Image" Margin="30,0,50,0" HorizontalContentAlignment="Center" MouseDoubleClick="imageSelection_doubleClick"/>
 
         <Image Grid.Column="1" Grid.Row="4" Height="30" HorizontalAlignment="Left" Source="C:\Users\illya\Documents\SResources\background.png"/>
-        <Label Grid.Column="1" Grid.Row="4" Content="Background" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+        <Label Grid.Column="1" Grid.Row="4" Content="Background" Margin="30,0,50,0" HorizontalContentAlignment="Center" MouseDoubleClick="backgroundSelection_Click"/>
         
-        <Label Grid.Column="1" Grid.Row="5" Content="Text" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+        <Label Grid.Column="1" Grid.Row="5" Content="..." Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
         
-        <Label Grid.Column="1" Grid.Row="6" Content="Text" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+        <Label Grid.Column="1" Grid.Row="6" Content="..." Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
         
-        <Label Grid.Column="1" Grid.Row="7" Content="Text" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+        <Label Grid.Column="1" Grid.Row="7" Content="..." Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
         
-        <Label Grid.Column="1" Grid.Row="8" Content="Text" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+        <Label Grid.Column="1" Grid.Row="8" Content="..." Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
         
-        <Label Grid.Column="1" Grid.Row="9" Content="Text" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+        <Label Grid.Column="1" Grid.Row="9" Content="..." Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
         
-        <Label Grid.Column="1" Grid.Row="10" Content="Text" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+        <Label Grid.Column="1" Grid.Row="10" Content="..." Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
         
-        <Label Grid.Column="1" Grid.Row="11" Content="Text" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+        <Label Grid.Column="1" Grid.Row="11" Content="..." Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
         
         <!--Column 2-->
         <!--HTML viualizer-->
 
-        <WebBrowser Grid.Column="2" Grid.Row="1" Grid.RowSpan="13" Name="htmlVisualizer"></WebBrowser>
+        <wv2:WebView2 Grid.Column="2" Grid.Row="1" Grid.RowSpan="13" Name="htmlVisualizer" Source="https://www.microsoft.com"/>
+        <!--<WebBrowser Grid.Column="2" Grid.Row="1" Grid.RowSpan="13" Name="htmlVisualizer"></WebBrowser>-->
 
         <!--Column 3-->
 
         <Frame Grid.Row="1" Grid.Column="3" x:Name="Properties" Grid.RowSpan="13" Margin="10,0,0,100" />
-
-        <!--<Label x:Name ="propertyHeader" Grid.Column="3" Grid.Row="1" Content="Content:" HorizontalContentAlignment="Center"/>
-        <TextBox Grid.Row="2" Grid.Column="3" x:Name="contentOfTheSelectedObject" Grid.RowSpan="2" Background="AliceBlue" Margin="5"/>-->
 
         <Button Grid.Column="3" Grid.Row="13" VerticalAlignment="Bottom" Content="New Line" Margin="25,5" Click="newLineCommand_btnClick" />
 
