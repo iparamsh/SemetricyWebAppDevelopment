@@ -11,11 +11,11 @@ Still working on it and work is in progress.
 ![image](https://user-images.githubusercontent.com/73321844/188295005-3b166ca1-9815-4342-8e85-12b71c97b66e.png)
 
 Create a new project or open an existing one
-![image](https://user-images.githubusercontent.com/73321844/188295038-2323fe91-cab3-4b22-a1b6-ae877bd7a812.png)
+![image](https://user-images.githubusercontent.com/73321844/191454750-c027d4ac-8cc1-4ab3-8b44-70c0e402d1a1.png)
 
 Then you should see something arround that
 Double click on something what you want to use and use panel on the right in order to add stuff to your website
-![image](https://user-images.githubusercontent.com/73321844/188295079-8c3241fb-8197-4850-9aa3-0e89d16b5d12.png)
+![image](https://user-images.githubusercontent.com/73321844/191454860-f592a916-0e23-4ae0-8ba5-c2bd80a0ce42.png)
 
  and boom thats it!
-![image](https://user-images.githubusercontent.com/73321844/188295108-dfe05c8e-6313-4cdd-902d-dfcff8df0fd6.png)
+![image](https://user-images.githubusercontent.com/73321844/191454519-8d6f990f-96d5-4c07-8216-4d4d76146c03.png)
