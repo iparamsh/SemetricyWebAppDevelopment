@@ -28,8 +28,19 @@
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="Content:" HorizontalContentAlignment="Center"/>
         
-        <TextBox x:Name="TextBoxContent" Grid.Row="1" Margin="5,10"/>
+        <TextBox x:Name="TextBoxContent" Grid.Row="1" Margin="5,5"/>
+
+        <Label Grid.Row="3" Content="Alignment" FontSize="15" HorizontalAlignment="Center"/>
         
-        <Label Grid.Row="2" Content="Background colors" />
+        <ComboBox x:Name="alignmentComboBox" Grid.Row="4" Margin="10,5" Text="Alignment">
+            <ComboBoxItem Content="Left"/>
+            <ComboBoxItem Content="Center"/>
+            <ComboBoxItem Content="Right"/>
+        </ComboBox>
+
+        <Label Grid.Row="5" Content="Font size: "/>
+        <TextBox x:Name="fontSizeProperty" Grid.Row="5" Margin="90,0,10,0" />
+        
+        <Button Grid.Row="6" Content="Text color"  Margin="10,5" Click="textColorBtnClick"/>
     </Grid>
 </Page>

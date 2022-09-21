@@ -26,10 +26,27 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
         <Label Grid.Row="0" Content="Content:" HorizontalContentAlignment="Center"/>
         
         <TextBox x:Name="TextBoxContent" Grid.Row="1" Margin="5,10"/>
-        
-        <Label Grid.Row="2" Content="Background colors" />
+
+        <Label Grid.Row="2" Content="Alignment:" HorizontalContentAlignment="Center"/>
+        <ComboBox x:Name="alignmentComboBox" Grid.Row="3" Margin="10,5" Text="Alignment">
+            <ComboBoxItem Content="Left"/>
+            <ComboBoxItem Content="Center"/>
+        </ComboBox>
+
+        <Button Grid.Row="4" Content="Background color" Margin="10,5" Click="backgroundColorSelection_btnClick"/>
+        <Button Grid.Row="5" Content="Text color" Margin="10,5" Click="textColorSelection_btnClick"/>
+
+        <Label Grid.Row="6" Content="Border radius:" HorizontalContentAlignment="Center"/>
+        <Label Grid.Row="7" Content="0" HorizontalContentAlignment="Left" Margin="5,0,5,0"/>
+        <Label Grid.Row="7" Content="20" HorizontalContentAlignment="Right" Margin="5,0,5,0"/>
+        <Slider Grid.Row="7" x:Name="borderRadiusSlider" Maximum="20" Margin="30,5" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+
+        <Label Grid.Row="8" Content="Font size:" />
+        <TextBox x:Name="fontSizePropertyTextBox" Grid.Row="8" Margin="80,0,10,0"/>
+
     </Grid>
 </Page>

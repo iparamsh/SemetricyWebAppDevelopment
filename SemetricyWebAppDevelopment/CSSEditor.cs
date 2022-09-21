@@ -15,9 +15,10 @@ namespace SemetricyWebAppDevelopment
             if (command == "" || command == null)
                 return;
 
-            string allCSS = File.ReadAllText(Container.pathToProject + "\\" + "style.css");
-            allCSS = allCSS.Insert((allCSS.Count() - 1), command + "\n");
-            File.WriteAllText(Container.pathToProject + "\\" + "style.css", allCSS);
+            string allCSS = File.ReadAllText(Globals.pathToProject + "\\" + "style.css");
+            // allCSS = allCSS.Insert((allCSS.Count() - 1), command + "\n");
+            allCSS += command + "\n";
+            File.WriteAllText(Globals.pathToProject + "\\" + "style.css", allCSS);
         }
     }
 }

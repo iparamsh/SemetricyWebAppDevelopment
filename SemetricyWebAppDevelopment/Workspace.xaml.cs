@@ -35,7 +35,7 @@ namespace SemetricyWebAppDevelopment
 
         private void loadedWindow_action(object sender, RoutedEventArgs e)
         {
-            htmlVisualizer.Source = new Uri(Container.pathToProject + "\\" + "index.html");
+            htmlVisualizer.Source = new Uri(Globals.pathToProject + "\\" + "index.html");
         }
 
         private void Text_mouseClick(object sender, MouseButtonEventArgs e)
@@ -68,14 +68,19 @@ namespace SemetricyWebAppDevelopment
             if (selectedItem == "text")
             {
                 HTMLEditor.addLineToWebPageCode(textElement.generateCommand());
+                CSSEditor.addCommandToCSSFile(textElement.generateCSSCommand());
+                Globals.textElementCtr++;
             }
             else if (selectedItem == "button")
             {
                 HTMLEditor.addLineToWebPageCode(buttonElement.generateCommand());
+                CSSEditor.addCommandToCSSFile(buttonElement.generateCSSCommand());
+                Globals.buttonElementCtr++;
             }
             else if (selectedItem == "image")
             {
                 HTMLEditor.addLineToWebPageCode(imageElement.generateCommand());
+                CSSEditor.addCommandToCSSFile(imageElement.generateCommand());
             }
             else if (selectedItem == "background")
             {

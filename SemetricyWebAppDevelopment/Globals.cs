@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace SemetricyWebAppDevelopment
 {
-    public class Container
+    public class Globals
     {
-       public static string pathToProject = "";
+        public static string pathToProject = "";
+
+        public static int textElementCtr = 1;
+
+        public static int buttonElementCtr = 1;
     }
 }

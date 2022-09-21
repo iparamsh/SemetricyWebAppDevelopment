@@ -15,7 +15,7 @@ namespace SemetricyWebAppDevelopment
             html += "<html>\n";
             html += "<head>\n";
             //making head
-            html += "<meta charset=\"utf - 8\">\n <meta name=\"viewport\" content=\"width=device-width\">\n<title>Semetricy</title>\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" />\n</head>";
+            html += "<meta charset=\"utf - 8\">\n <meta name=\"viewport\" content=\"width=device-width\">\n<title>Semetricy</title>\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" />\n</head>\n";
             //attaching script
             html += "<body>\nWelcome to Semetricy\n<script src=\"script.js\"></script>\n";
             html += "<script src=\"" + (path + "\\" + "script.js") + "\" theme=\"blue\" defer></script>\n";
@@ -43,9 +43,9 @@ namespace SemetricyWebAppDevelopment
             {
                 return;
             }
-            string allHtml = File.ReadAllText(Container.pathToProject + "\\" + "index.html");
+            string allHtml = File.ReadAllText(Globals.pathToProject + "\\" + "index.html");
             allHtml = allHtml.Insert((allHtml.Count() - 16), content + "\n");
-            File.WriteAllText(Container.pathToProject + "\\" + "index.html", allHtml);
+            File.WriteAllText(Globals.pathToProject + "\\" + "index.html", allHtml);
         }
     }
 }

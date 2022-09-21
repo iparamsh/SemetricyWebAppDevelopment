@@ -40,7 +40,7 @@ namespace SemetricyWebAppDevelopment
         {
             if (rgbBackground != "")
             {
-                return "background-color: " + rgbBackground + ";";
+                return "body {\n background-color: " + rgbBackground + ";\n}";
             }
             return "";
         }

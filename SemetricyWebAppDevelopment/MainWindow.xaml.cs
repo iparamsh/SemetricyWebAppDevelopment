@@ -83,7 +83,7 @@ namespace SemetricyWebAppDevelopment
             if (nameOfTheProject.Text != "" && pathToProject.Text != "")
             {
                 fileOperation.createNewProject(pathToProject.Text, nameOfTheProject.Text);
-                Container.pathToProject = pathToProject.Text + "\\" + nameOfTheProject.Text;
+                Globals.pathToProject = pathToProject.Text + "\\" + nameOfTheProject.Text;
                 jumpToNewWindow();
             }
             else
@@ -99,7 +99,7 @@ namespace SemetricyWebAppDevelopment
         {
             if (pathToOpenProject.Text != "" && fileOperation.checkIfCorrectPathForOpenFile(pathToOpenProject.Text))
             {
-                Container.pathToProject = pathToOpenProject.Text;
+                Globals.pathToProject = pathToOpenProject.Text;
                 jumpToNewWindow();
             }
             else
