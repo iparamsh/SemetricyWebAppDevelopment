@@ -52,7 +52,7 @@ namespace SemetricyWebAppDevelopment
             string command = ".TextElement_" + Globals.textElementCtr + "{\n";
 
             command += getAlignmentCommand();
-            command += getFontCommand();
+            command += getFontSizeCommand();
             command += getColorCommand();
 
             command += "}\n";
@@ -80,7 +80,7 @@ namespace SemetricyWebAppDevelopment
             return command;
         }
 
-        private string getFontCommand()
+        private string getFontSizeCommand()
         {
             string command = "";
 

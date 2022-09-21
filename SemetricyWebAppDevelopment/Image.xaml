@@ -31,7 +31,23 @@
         <TextBox x:Name="Source" Grid.Row="1" Margin="5,10"/>
 
         <Button Grid.Row="2" Content="Browse" HorizontalAlignment="Center" Click="BrowseImage_btnClick" />
-        
-        
+
+        <Label Grid.Row="3" Content="Border-radius" HorizontalContentAlignment="Center"/>
+        <Label Grid.Row="4" Content="0" HorizontalContentAlignment="Left" Margin="5,0,5,0"/>
+        <Label Grid.Row="4" Content="20" HorizontalContentAlignment="Right" Margin="5,0,5,0"/>
+        <Slider Grid.Row="4" x:Name="borderRadiusSlider" Maximum="20" Margin="30,5" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+
+        <Label Grid.Row="5" HorizontalAlignment="Center" Content="Alignment:"/>
+        <ComboBox x:Name="alignmentComboBox" Grid.Row="6" Margin="10,5" Text="Alignment">
+            <ComboBoxItem Content="Left"/>
+            <ComboBoxItem Content="Center (not reccomended)"/>
+            <ComboBoxItem Content="Right"/>
+        </ComboBox>
+
+        <Label Grid.Row="7" Content="Width:" HorizontalContentAlignment="Center"/>
+        <TextBox Grid.Row="8" x:Name="widthTB" Margin="30,5"/>
+
+        <Label Grid.Row="9" Content="Height:" HorizontalContentAlignment="Center"/>
+        <TextBox Grid.Row="10" x:Name="heightTB" Margin="30,5"/>
     </Grid>
 </Page>

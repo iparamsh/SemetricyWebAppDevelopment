@@ -26,6 +26,10 @@ namespace SemetricyWebAppDevelopment
         {
             InitializeComponent();
         }
+        private void browseButtonClick(object sender, RoutedEventArgs e)
+        {
+            Source.Text = FileOperations.browseImageFileDialog();
+        }
 
         private void backgroundColorSelector_click(object sender, RoutedEventArgs e)
         {
@@ -38,10 +42,27 @@ namespace SemetricyWebAppDevelopment
 
         public string generateCSSCommand()
         {
+            string command = "body {\n";
+
+            command += getBackgroundColorCommand();
+            command += getBackgroundImageCommand();
+
+            command += "}\n";
+            return command;
+        }
+
+        private string getBackgroundColorCommand()
+        {
             if (rgbBackground != "")
-            {
-                return "body {\n background-color: " + rgbBackground + ";\n}";
-            }
+                return "background-color: " + rgbBackground + ";\n";
+
+            return "";
+        }
+
+        private string getBackgroundImageCommand()
+        {
+            if (Source.Text != "")
+                return "background-image: \"" + Source.Text + "\";\n";
             return "";
         }
     }

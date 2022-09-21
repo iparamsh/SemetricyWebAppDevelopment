@@ -25,17 +25,17 @@ namespace SemetricyWebAppDevelopment
 
             File.WriteAllText(path + "\\" + "index.html", html);
 
-            editCSSTemplateForEmptyProject(path);
+           // editCSSTemplateForEmptyProject(path);
         }
 
-        private static void editCSSTemplateForEmptyProject(string path)
+       /* private static void editCSSTemplateForEmptyProject(string path)
         {
             string css = "html, body {\n";
             css += "height: 100%;\n";
             css += "width: 100%;\n";
             css += "}";
             File.WriteAllText(path + "//" + "style.css", css);
-        }
+        }*/
 
         public static void addLineToWebPageCode(string content)
         {

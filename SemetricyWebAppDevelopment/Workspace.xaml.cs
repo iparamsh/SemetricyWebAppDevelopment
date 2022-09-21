@@ -61,6 +61,16 @@ namespace SemetricyWebAppDevelopment
             this.selectedItem = "background";
         }
 
+        private void videoSelection_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void shapeSelection_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
         //----------------
 
         private void AddObject_btnClick(object sender, RoutedEventArgs e)
@@ -80,7 +90,8 @@ namespace SemetricyWebAppDevelopment
             else if (selectedItem == "image")
             {
                 HTMLEditor.addLineToWebPageCode(imageElement.generateCommand());
-                CSSEditor.addCommandToCSSFile(imageElement.generateCommand());
+                CSSEditor.addCommandToCSSFile(imageElement.generateCSSCommand());
+                Globals.imageElementCtr++;
             }
             else if (selectedItem == "background")
             {

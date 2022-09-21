@@ -49,10 +49,10 @@
         <Label Grid.Column="1" Grid.Row="4" Content="Background" Margin="30,0,50,0" HorizontalContentAlignment="Center" MouseDoubleClick="backgroundSelection_Click"/>
 
         <Image Grid.Column="1" Grid.Row="5" Height="30" HorizontalAlignment="Left" Source="C:\Users\illya\Documents\SResources\video.png"/>
-        <Label Grid.Column="1" Grid.Row="5" Content="Video" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+        <Label Grid.Column="1" Grid.Row="5" Content="Video" Margin="30,0,50,0" HorizontalContentAlignment="Center" MouseDoubleClick="videoSelection_Click"/>
 
         <Image Grid.Column="1" Grid.Row="6" Height="30" HorizontalAlignment="Left" Source="C:\Users\illya\Documents\SResources\shapes.png"/>
-        <Label Grid.Column="1" Grid.Row="6" Content="Shapes" Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
+        <Label Grid.Column="1" Grid.Row="6" Content="Shapes" Margin="30,0,50,0" HorizontalContentAlignment="Center"  MouseDoubleClick="shapeSelection_Click"/>
         
         <!--<Label Grid.Column="1" Grid.Row="7" Content="..." Margin="30,0,50,0" HorizontalContentAlignment="Center"/>
         

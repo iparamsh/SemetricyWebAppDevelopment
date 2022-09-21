@@ -32,7 +32,66 @@ namespace SemetricyWebAppDevelopment
 
         public string generateCommand()
         {
-            return "<img src=\"" + Source.Text + "\">";
+            return "<img class = \"ImageElement_" + Globals.imageElementCtr +"\" src=\"" + Source.Text + "\">";
+        }
+
+        public string generateCSSCommand()
+        {
+            string command = ".ImageElement_" + Globals.imageElementCtr + "{\n";
+
+            command += getBorderRadiusCommand();
+            command += getAlignmentCommand();
+
+            command += getWidthCommand();
+            command += getHeightCommand();
+
+            command += "}\n";
+
+            return command;
+        }
+
+        private string getAlignmentCommand()
+        {
+            string command = "";
+
+            if (alignmentComboBox.SelectedIndex == 0)
+            {
+                command += "float: left;\n";
+            }
+            else if (alignmentComboBox.SelectedIndex == 1)
+            {
+                command += "display: block;\nmargin: 0 auto;\n";
+            }
+            else if (alignmentComboBox.SelectedIndex == 2)
+            {
+                command += "float: right;\n";
+            }
+
+            return command;
+        }
+
+        private string getBorderRadiusCommand ()
+        {
+            return "border-radius: " + borderRadiusSlider.Value + "px;\n";
+        }
+
+        private string getWidthCommand()
+        {
+            if (widthTB.Text == "auto")
+                return "width: auto;\n";
+            else if (int.TryParse(widthTB.Text, out int width))
+                return "width: " + width + "px;\n";
+            return "";
+        }
+
+        private string getHeightCommand()
+        {
+            if (heightTB.Text == "auto")
+                return "width: auto;\n";
+            else if (int.TryParse(heightTB.Text, out int height))
+                return "width: " + height + "px;\n";
+
+            return "";
         }
     }
 }
