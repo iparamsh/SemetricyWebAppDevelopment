@@ -17,7 +17,7 @@ namespace SemetricyWebAppDevelopment
             //making head
             html += "<meta charset=\"utf - 8\">\n <meta name=\"viewport\" content=\"width=device-width\">\n<title>Semetricy</title>\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" />\n</head>\n";
             //attaching script
-            html += "<body>\nWelcome to Semetricy\n<script src=\"script.js\"></script>\n";
+            html += "<body>\n<script src=\"script.js\"></script>\n";
             html += "<script src=\"" + (path + "\\" + "script.js") + "\" theme=\"blue\" defer></script>\n";
 
             html += "</body>\n";

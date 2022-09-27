@@ -49,7 +49,18 @@ namespace SemetricyWebAppDevelopment
             {
                 // Open document 
                 string filename = dlg.FileName;
-                return filename;
+                string destination = Globals.pathToProject + "\\img\\" + Path.GetFileName(filename);
+
+                try
+                {
+                    File.Copy(filename, destination, true);
+                }
+                catch (IOException iox)
+                {
+                    MessageBox.Show(iox.Message);
+                }
+
+                return destination;
             }
             return "";
         }
@@ -67,6 +78,8 @@ namespace SemetricyWebAppDevelopment
                 cssFile.Close();
                 var jsFile = File.CreateText(path + "\\" + "script.js");
                 jsFile.Close();
+
+                var subsubfolder = new DirectoryInfo(path).CreateSubdirectory("img").FullName;
 
                 HTMLEditor.editHTMLTemplateForEmptyProject(path);
             }
