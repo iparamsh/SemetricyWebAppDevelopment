@@ -1,6 +1,4 @@
 # SemetricyWebAppDevelopment
-# Video tutorial
-https://www.youtube.com/watch?v=YpG7XBO2Csg
 
 This is a software for automized website development, should be easy to use and explore
 Still working on it and work is in progress.
