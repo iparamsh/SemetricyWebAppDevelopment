@@ -26,6 +26,7 @@ namespace SemetricyWebAppDevelopment
         Button buttonElement = new Button();
         Image imageElement = new Image();  
         Background backgroundElement = new Background();  
+        Video videoElement = new Video();
 
         private string selectedItem = "";
         public Workspace()
@@ -63,7 +64,8 @@ namespace SemetricyWebAppDevelopment
 
         private void videoSelection_Click(object sender, MouseButtonEventArgs e)
         {
-
+            Properties.Content = videoElement;
+            this.selectedItem = "video";
         }
 
         private void shapeSelection_Click(object sender, MouseButtonEventArgs e)
@@ -97,7 +99,14 @@ namespace SemetricyWebAppDevelopment
             {
                 CSSEditor.addCommandToCSSFile(backgroundElement.generateCSSCommand());
             }
+            else if (selectedItem == "video")
+            {
+                HTMLEditor.addLineToWebPageCode(videoElement.generateCommand());
+                Globals.videoElementCtr++;
+            }
             htmlVisualizer.Reload();
+
+            FileOperations.saveCounterData();
         }
 
         private void newLineCommand_btnClick(object sender, RoutedEventArgs e)

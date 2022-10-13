@@ -82,8 +82,9 @@ namespace SemetricyWebAppDevelopment
         {
             if (nameOfTheProject.Text != "" && pathToProject.Text != "")
             {
-                fileOperation.createNewProject(pathToProject.Text, nameOfTheProject.Text);
                 Globals.pathToProject = pathToProject.Text + "\\" + nameOfTheProject.Text;
+
+                fileOperation.createNewProject(pathToProject.Text, nameOfTheProject.Text);
                 jumpToNewWindow();
             }
             else
@@ -100,7 +101,9 @@ namespace SemetricyWebAppDevelopment
             if (pathToOpenProject.Text != "" && fileOperation.checkIfCorrectPathForOpenFile(pathToOpenProject.Text))
             {
                 Globals.pathToProject = pathToOpenProject.Text;
+                fileOperation.readSavedData();
                 jumpToNewWindow();
+
             }
             else
             {
@@ -113,6 +116,7 @@ namespace SemetricyWebAppDevelopment
                     MessageBox.Show("Path is incorrect!");
                 }
             }
+           
         }
         private void jumpToNewWindow()
         {

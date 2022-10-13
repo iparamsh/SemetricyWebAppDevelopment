@@ -15,5 +15,7 @@ namespace SemetricyWebAppDevelopment
         public static int buttonElementCtr = 1;
 
         public static int imageElementCtr = 1;
+
+        public static int videoElementCtr = 1;
     }
 }
